@@ -53,13 +53,14 @@
   z-index: 998;
   margin-bottom: 0;
   overflow: hidden;
-  height: 500px;
+  height: 110px;
   display: flex;
   align-items: flex-end;
   padding: $fixed-action-btn-padding-top 15px 15px 15px;
   padding-bottom: 15px;
   padding-left: 15px;
   padding-right: 15px;
+  transition: height 400ms;
   ul {
     position: absolute;
     right: 0;
@@ -67,13 +68,13 @@
     left: 0;
     display: flex;
     flex-direction: column;
-    height: $fixed-action-btn-bottom;
+    height: 0;
     padding: 0;
     margin: 0 0 15px;
     text-align: center;
     transition: 400ms all;
     opacity: 0;
-    margin-bottom: 40px;
+    margin-bottom: 0;
     li {
       z-index: 0;
       display: flex;
@@ -95,7 +96,11 @@
   }
   &.active ul {
     height: 300px;
+    margin-bottom: 40px;
     opacity: 1;
+  }
+  &.active {
+    height: 500px;
   }
 }
 
